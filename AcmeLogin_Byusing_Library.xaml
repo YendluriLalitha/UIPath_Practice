@@ -59,7 +59,7 @@
       <AssemblyReference>UiPath.Credentials.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="AcmeLogin_Byusing_Library" sap:VirtualizedContainerService.HintSize="242,176" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="AcmeLogin_Byusing_Library" sap:VirtualizedContainerService.HintSize="242,238" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ss:SecureString" Name="password" />
       <Variable x:TypeArguments="x:String" Name="userName" />
@@ -71,5 +71,6 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:GetSecureCredential CredentialType="Generic" DisplayName="Get secure credential" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="GetSecureCredential_1" Password="[password]" PersistanceType="Enterprise" Target="Acme_Login" Username="[userName]" />
     <l:NewActivity sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="NewActivity_1" in_Password="[password]" in_Url="https://acme-test.uipath.com/login" in_UserName="[userName]" />
+    <ui:KillProcess ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="iexplorer" />
   </Sequence>
 </Activity>
